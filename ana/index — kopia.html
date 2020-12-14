@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bracia Słowianie</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto+Condensed:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    html {
+      font-family: arial, sans-serif;
+      /* font-size: 10px; */
+
+    }
+
+    header {
+      position: relative;
+      height: 100vh;
+
+      max-width: 1400px;
+      margin: 0 auto;
+
+      background-image: url(green.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    header>* {
+      position: absolute;
+
+    }
+
+    .swarga {
+      margin: 0, auto;
+      top: 19px;
+      left: 0;
+      width: 100%;
+      /* text-align: left; */
+      padding: 30px 30px;
+
+
+    }
+
+    .logo {
+      top: 30px;
+      left: 60px;
+      width: 10%;
+    }
+
+    /* @font-face {
+      font-family: "nazi";
+      src: url(OldLondon.ttf);
+    } */
+
+    header h1 {
+      top: 45%;
+      width: 100%;
+      padding: 20px;
+      font-size: 90px;
+      /* font-family: "nazi"; */
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 10px;
+      background-color: rgba(0, 0, 0, .5);
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+
+    }
+
+    header div {
+      bottom: 30px;
+      left: 150px;
+    }
+
+    header div span {
+      color: white;
+      bottom: 50px;
+      left: 80px;
+      letter-spacing: 2px;
+      font-size: 40px;
+      font-family: 'Oswald', sans-serif;
+      text-align: center;
+    }
+
+    header button {
+      bottom: 50px;
+      right: 80px;
+      font-size: 30px;
+      padding: 3px 31px;
+      font-family: roboto condensed, arial, sans-serif;
+      text-transform: uppercase;
+      background-color: transparent;
+      color: white;
+      border: 4px solid white;
+      transition: .3s;
+
+    }
+
+    header button:hover {
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    section {
+      width: 86%;
+      margin: 80px auto 0 auto;
+    }
+
+
+
+    */ div.nag {
+
+      padding: 20px;
+      /*  margin: 0 auto;*/
+    }
+
+    div.nag h2 {
+      margin-left: -20px;
+      text-align: left;
+      margin-bottom: 50px;
+    }
+
+    section p {
+      line-height: 1.8;
+      font-size: 15px;
+      margin-bottom: 118px;
+
+    }
+
+    div.zagadka {
+      margin-top: 50px;
+    }
+
+    /* div.zagadka h2 { */
+    /* margin-bottom: 50px;
+      text-align: center;
+      text-transform: uppercase;
+    } */
+
+
+
+    .start {
+
+      display: block;
+      margin-bottom: 200px;
+      margin: 0 auto;
+      bottom: 1000px;
+      right: 80px;
+      font-size: 20px;
+      padding: 10px 10px;
+      font-family: roboto condensed, arial, sans-serif;
+      text-transform: uppercase;
+      background-color: transparent;
+      color: black;
+      border: 4px solid black;
+      transition: .6s;
+
+    }
+
+    .area {
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+
+
+
+    }
+
+    start:hover {
+      background-color: black;
+      border: 4px solid rgb(99, 168, 21);
+      color: white;
+    }
+
+    .zagadka p {
+      margin-top: 25px;
+    }
+
+
+
+
+
+    h3 {
+      padding: 20px 0;
+      display: inline;
+
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      margin-top: 50px;
+      padding: 5px;
+    }
+
+    .cursor {
+      opacity: 0;
+      transition: .2s;
+    }
+
+    .cursor.active {
+      opacity: 1;
+    }
+
+    .cursor1 {
+      opacity: 0;
+      transition: .2s;
+    }
+
+    .cursor1.active {
+      opacity: 1;
+    }
+
+
+
+    @media (max-width: 1024px) {
+      header {
+        background-size: cover;
+      }
+
+      header img {
+        width: 20%;
+      }
+    }
+
+    @media (max-width: 812px) and (orientation: landscape) {
+      header img {
+        /* width: 25%;*/
+      }
+
+      header h1 {
+        font-size: 26px;
+      }
+
+      header button {
+        bottom: 30px;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 736px) and (orientation: landscape) {
+      header {
+        max-width: 100vw;
+      }
+
+      header img {
+        width: 15%;
+      }
+
+      header h1 {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 640px) and (orientation: landscape) {
+      header h1 {
+        top: 40%;
+        font-size: 40px;
+      }
+
+      header button {
+        right: 20px;
+      }
+
+      header div {
+
+        left: 50px;
+      }
+
+      header div span {
+
+        letter-spacing: 2px;
+        font-size: 22px;
+        left: 50px;
+
+      }
+    }
+
+    @media (max-width: 533px) and (orientation: landscape) {
+
+      header h1 {
+        top: 40%;
+        font-size: 20px;
+      }
+
+      header div span {
+        font-size: 19px;
+        left: 50px;
+      }
+
+      header button {
+        bottom: 30px;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 414px) and (orientation: portrait) {
+      header img {
+        left: 10%;
+        width: 30%;
+      }
+
+      .logo {
+
+        width: 23%;
+      }
+
+      header h1 {
+        top: 35%;
+        font-size: 25px;
+        line-height: 180%;
+      }
+
+      header div {
+        font-size: 19px;
+        left: 50px;
+      }
+
+      header div span {
+        font-size: 19px;
+        left: 50px;
+      }
+
+      header button {
+        right: 10%;
+        width: 80%;
+        font-size: 32px;
+
+      }
+    }
+
+    @media (max-width: 360px) and (orientation: portrait) {
+
+      header h1 {
+        top: 40%;
+        font-size: 24px;
+
+      }
+
+      header div {
+
+        left: 32px;
+      }
+
+      header div span {
+        font-size: 19px;
+        left: 50px;
+      }
+
+      header button {
+
+        font-size: 20px;
+      }
+    }
+
+
+    @media (max-width: 320px) and (orientation: portrait) {
+
+      header button {
+
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="swarga">
+      <img class="logo" src="kołowrót.png" alt="kołowrót">
+    </div>
+    <h1>Bracia Słowianie</h1>
+
+    <button class="hey">Poznaj nas!</button>
+    <div>
+      <span class="text1"></span><span class="cursor1">|</span>
+    </div>
+  </header>
+  <section>
+
+    <div class="nag">
+      <h2>Jeżeli już tu trafiłeś...to dobry znak!</h2>
+    </div>
+    <p>Bracia Słowianie to elitarna grupa najszlachetniejszych mężów, których dotąd nosiła nasza Matka Ziemia.
+      Powstawanie jej ma miejsce cyklicznie, w każdym z eonów czasu. Jednak teraz nastał czas szczególnej jej
+      wizualizacji i inicjacji. Każdy z mędrców grupy to jest <strong>Kistron</strong>,
+      <strong>Karczmanasutra</strong>,
+      <strong>Pyndzosław</strong> oraz <strong>Ananuaki</strong> są w stanie szczególnej transformacji swojej mocy aby
+      pomagać w dążeniu do jedności ducha. Dlatego jeśliś gotów, rozkoduj wiadomość a znajdziesz nas w prastarych
+      lasach <strong>Lechii</strong>.</p>
+    <div class="zagadka">
+      <!-- <h2>Zakodowana wiadomość</h2> -->
+      <button class="start">ZAKODOWANA WIADOMOŚĆ</button>
+      <div class="area">
+        <span class="text"></span><span class="cursor">|</span>
+      </div>
+  </section>
+  <footer>&copy; Anakonda Corporation</footer>
+  <script src="main.js"></script>
+  <script src="main2.js"></script>
+</body>
+
+</html>

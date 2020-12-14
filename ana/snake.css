@@ -1,0 +1,77 @@
+/* .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+ */
+
+
+
+
+
+
+#snake {
+  max-width: 600px;
+}
+
+.column {
+
+  display: inline-block;
+
+}
+
+
+.column {
+  font-size: 0;
+}
+
+.row {
+  font-size: 16px;
+}
+
+/* .container {
+  margin: 0 auto;
+  width: 50vw;
+} */
+
+/* .buttons {
+  position: relative;
+  height: 200px;
+  width: 50vw;
+  margin: 0 auto;
+  /* background-color: rgb(0, 255, 170); */
+/* }
+
+.up,
+.right,
+.down,
+.left {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  display: inline-block;
+  font-size: 40px;
+  text-align: center;
+  /* border: 2px solid red; */
+/* padding: 15px 32px; */
+
+
+/* .right {
+  top: 75px;
+  right: 210px;
+}
+
+.left {
+  top: 75px;
+  left: 210px;
+}
+
+.down {
+  bottom: 0px;
+  left: 275px;
+}
+
+.up {
+  top: 0;
+  left: 275px;
+}  */
