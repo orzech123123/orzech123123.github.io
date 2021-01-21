@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="text"></h1>
+        </header>
+        <main>
+            <div class="card-container">
+                <img id="playerDeck" />
+            </div>
+
+            <div class="card-container">
+                <div class="cards card is-none">
+                    <div class="side"><img src="" id="choosenPlayer" alt="J">
+                    </div>
+                    <div class="side back"><img src="" id="choosenPlayer2" alt="J"></div>
+                </div>
+            </div>
+
+            <div class="card-container to-new-line">
+                <img id="computerDeck" />
+            </div>
+
+            <div class="card-container">
+                <div class="cards card2 is-none">
+                    <div class="side"><img src="" id="choosenComputer" alt="J">
+                    </div>
+                    <div class="side back"><img src="" id="choosenComputer2" alt="J"></div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="start">Start</button>
+                <button class="next">Następna karta</button>
+                <button class="auto">Auto</button>
+            </div>
+
+            <div class="score-panel">
+                <h2>Zwycięzca gry: <span data-summary="who-win"></span></h2>
+                <h3>Aktualne wyniki</h3>
+                <p class="wins-player">wygrane gracza: <span>0</span></p>
+                <p class="wins-computer">wygrane komputera: <span>0</span></p>
+                <p class="draws">remisy: <span>0</span></p>
+
+
+            </div>
+
+
+        </main>
+        <footer>&copy; Anakonda's Games Incorporation Unlimited</footer>
+    </div>
+    <script src="main.js"></script>
+    <script src="Card.js"></script>
+    <script src="CardsManager.js"></script>
+    <script src="CardAnimator.js"></script>
+    <script src="Game.js"></script>
+    <script src="TurnResult.js"></script>
+    <script src="Statistics.js"></script>
+    <script>
+        window.pathPrefix = location.hostname.includes("localhost") || location.hostname.includes("127.0.0.1") ?
+            "" :
+            "/Wojna";
+
+        document.getElementById("playerDeck").src = `${window.pathPrefix}/JPEG/blue_back.jpg`;
+        document.getElementById("computerDeck").src = `${window.pathPrefix}/JPEG/Green_back.jpg`;
+        document.getElementById("choosenPlayer").src = `${window.pathPrefix}/JPEG/blue_back.jpg`;
+        document.getElementById("choosenComputer").src = `${window.pathPrefix}/JPEG/Green_back.jpg`;
+    </script>
+    <script>
+        const game = new Game();
+    </script>
+
+</body>
+
+</html>
