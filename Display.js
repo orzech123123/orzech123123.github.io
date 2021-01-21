@@ -17,6 +17,8 @@ class Display {
         const column = document.createElement("div");
         column.className = "column";
 
+        let gridColumn = [];
+
         for (let y = 0; y < _height; y++) {
           let cell = document.createElement("div");
           cell.className = "row";
@@ -27,22 +29,24 @@ class Display {
           cell.style.height = pixelSize + "px";
 
           column.appendChild(cell);
-          _grid.push({
-            x: pixel.x,
-            y: pixel.y,
+
+          gridColumn.push({
             color: pixel.color,
             html: null
-          })
+          });
         }
+
+        _grid.push(gridColumn);
 
         container.appendChild(column);
       }
       _element.innerHTML = container.outerHTML;
 
 
-      for (const cell of _grid) {
-        cell.html = document.querySelector("#snake > div > div:nth-child(" + (cell.x + 1) + ") > div:nth-child(" + (cell.y + 1) + ")");
-        // _test.style.backgroundColor = "blue"
+      for (let x = 0; x < _width; x++) {
+        for (let y = 0; y < _height; y++) {
+          _grid[x][y].html = document.querySelector("#snake > div > div:nth-child(" + (x + 1) + ") > div:nth-child(" + (y + 1) + ")");
+        }
       }
     }
 
@@ -76,22 +80,17 @@ class Display {
       pixel.color = color;
     }
 
-    let _rendered = false;
     this.render = () => {
-      // _initHtml();
-      // return;
       for (let x = 0; x < _width; x++) {
         for (let y = 0; y < _height; y++) {
           let pixel = _getPixel(x, y);
-          let gridCell = _grid.filter(cell => cell.x == x && cell.y == y)[0];
+          let gridCell = _grid[x][y];
 
           if (pixel.color != gridCell.color) {
             gridCell.html.style.backgroundColor = gridCell.color = pixel.color;
           }
         }
       }
-
-      _rendered = true;
     }
 
     _initPixels();
